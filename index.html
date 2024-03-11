@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>申请截止日期倒计时</title>
+
     <style>
-        /* 样式可以根据你的网站风格进行调整 */
-        #countdown {
-            font-size: 24px;
-            font-weight: bold;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .event {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .event h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .event p {
+            font-size: 14px;
+            color: #888;
+            margin: 0;
         }
     </style>
 </head>
@@ -69,7 +95,17 @@
         </div>
       </div>
     </div>
-
+    <div class="timeline">
+        <div class="event">
+            <h3>项目A</h3>
+            <p>截止日期：2024年5月31日</p>
+        </div>
+        <div class="event">
+            <h3>项目B</h3>
+            <p>截止日期：2024年6月15日</p>
+        </div>
+        <!-- 添加更多项目 -->
+    </div>
 
 </body>
 </html>
