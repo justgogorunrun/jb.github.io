@@ -75,34 +75,13 @@
           <p><strong>网站：</strong><a href="http://iros2024-abudhabi.org/">http://iros2024-abudhabi.org/</a></p>[^1^][1]
         </div>
         <div class="countdown">
-          <p><strong>倒计时：</strong>04天 20小时 30分 33秒</p>
+          <p><strong>倒计时：</strong></p>
           
-
-          <script>
-              // 设置会议截止日期（示例：IROS 2024）
-              var countDownDate = new Date("May 15, 2024 23:59:59").getTime();
-      
-              // 更新倒计时
-              var x = setInterval(function() {
-                  var now = new Date().getTime();
-                  var distance = countDownDate - now;
-      
-                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-                  document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
-      
-                  if (distance < 0) {
-                      clearInterval(x);
-                      document.getElementById("countdown").innerHTML = "已截止";
-                  }
-              }, 1000);
-          </script>
+          
         </div>
       </div>
     </div>
+    
 
     <div class="timeline">
       <div class="timeline-left">
@@ -119,6 +98,47 @@
         </div>
       </div>
     </div>
+
+    <div class="timeline">
+      <div class="timeline-left">
+        <p><strong>IROS 2024</strong></p>
+        <p>CCF C 人工智能</p>
+      </div>
+      <div class="timeline-right">
+        <div class="deadline">
+          <p><strong>截止日期：</strong>2024年5月15日 23:59:59</p>
+          <p><strong>网站：</strong><a href="http://iros2024-abudhabi.org/">http://iros2024-abudhabi.org/</a>[^1^][1]</p>
+        </div>
+        <div class="countdown">
+          <p><strong>倒计时：</strong><span id="countdown">加载中...</span></p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    // 设置会议截止日期（示例：IROS 2024）
+    var countDownDate = new Date("May 15, 2024 23:59:59").getTime();
+    
+    // 更新倒计时
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // 显示倒计时
+      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+    
+      // 如果时间到了，则显示已结束
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "已截止";
+      }
+    }, 1000);
+    </script>
+
     <div class="timeline">
         <div class="event">
             <h3>项目A</h3>
