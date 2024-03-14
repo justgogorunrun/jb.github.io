@@ -117,24 +117,24 @@
     <p id="countdown2"></p>
     <script>
     // 设置会议截止日期（示例：IROS 2024）
-    var countDownDate = new Date("May 15, 2024 23:59:59").getTime();
+    var countDownDate1 = new Date("May 15, 2024 23:59:59").getTime();
     
     // 更新倒计时
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var x1 = setInterval(function() {
+      var now1 = new Date().getTime();
+      var distance1 = countDownDate1 - now1;
+      var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+      var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
     
       // 显示倒计时
-      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+      document.getElementById("countdown2").innerHTML = days1 + "天 " + hours1 + "小时 " + minutes1 + "分钟 " + seconds1 + "秒";
     
       // 如果时间到了，则显示已结束
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "已截止";
+      if (distance1 < 0) {
+        clearInterval(x1);
+        document.getElementById("countdown2").innerHTML = "已截止";
       }
     }, 1000);
     </script>
